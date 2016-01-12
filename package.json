@@ -1,0 +1,22 @@
+{
+  "name": "testnode",
+  "version": "0.0.1",
+  "description": "test",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuponthetop/testnode.git"
+  },
+  "author": "cuponthetop",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cuponthetop/testnode/issues"
+  },
+  "homepage": "https://github.com/cuponthetop/testnode#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
