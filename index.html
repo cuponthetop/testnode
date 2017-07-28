@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase Chat</title>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    // TODO: Replace with your project's customized code snippet
+    var config = {
+      apiKey: "AIzaSyDAAJDFPXgHl5SFjaV6HFiEOCWySb48lro",
+      authDomain: "gachi-test.firebaseapp.com",
+      databaseURL: "https://gachi-test.firebaseio.com",
+      projectId: "gachi-test",
+      storageBucket: "gachi-test.appspot.com",
+      messagingSenderId: "48888243317"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src='https://code.jquery.com/jquery-3.2.1.js'></script>
+  <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+
+<body>
+  <input id="email" type="text" placeholder="Email"><br/>
+  <input id="password" type="text" placeholder="Password"><br/>
+  <input id="nickname" type="text" placeholder="Nickname"><br/>
+  <input id="text" type="text" placeholder="Message"><br/>
+  <button id="post">Post</button><br/>
+  <button id="register">Register</button><br/>
+  <button id="login">Login</button><br/>
+  <a id="kakao-login-btn"></a>
+  <a id="kakao-logout-btn" href="http://developers.kakao.com/logout"></a> <br/>
+  <div id="token"></div>
+  <div id="results"></div>
+
+  <script src='test-web/common.js'></script>
+  <script src='test-web/register.js'></script>
+  <script src='test-web/pass-login.js'></script>
+  <script src='test-web/kakao-login.js'></script>
+  <script src='test-web/chat.js'></script>
+</body>
+
+</html>
