@@ -66,16 +66,16 @@ function setKakaoLoggedIn() {
 function signInCustom(token) {
   firebase.auth().signInWithCustomToken(token).then(function (res) {
 
-    username = result.displayName;
-    return result.getIdToken();
+    username = res.uid;
+    return res.getIdToken();
   }).then(function (res) {
 
     var tokenText = document.createElement("p");
-    tokenText.textContent = JSON.stringify(token3);
+    tokenText.textContent = JSON.stringify(res);
 
     $("#token").append(tokenText);
 
     // Begin listening for data
-    startListening(token3);
+    startListening(res);
   });
 }

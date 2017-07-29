@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase Chat</title>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    // TODO: Replace with your project's customized code snippet
+    var config = {
+      apiKey: "AIzaSyDAAJDFPXgHl5SFjaV6HFiEOCWySb48lro",
+      authDomain: "gachi-test.firebaseapp.com",
+      databaseURL: "https://gachi-test.firebaseio.com",
+      projectId: "gachi-test",
+      storageBucket: "gachi-test.appspot.com",
+      messagingSenderId: "48888243317"
+    };
+    firebase.initializeApp(config);
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+  <script src='https://code.jquery.com/jquery-3.2.1.js'></script>
+</head>
+
+<body>
+  <input id="token" type="text" placeholder="token"><br/>
+  <input id="term" type="text" placeholder="term"><br/>
+  <button id="search">Search</button><br/>
+  <button id="list">List</button><br/>
+  <div id="tokenc"></div>
+  <div id="festivals"></div>
+
+  <script src='festival/common.js'></script>
+  <script src='festival/search.js'></script>
+  <script src='festival/list.js'></script>
+</body>
+
+</html>

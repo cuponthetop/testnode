@@ -25,7 +25,7 @@ loginButton.click(function () {
 
       setLoggedIn();
 
-      username = result.displayName;
+      username = result.uid;
       return result.getIdToken();
     })
     .then(function (token) {
@@ -38,23 +38,3 @@ loginButton.click(function () {
       startListening(token);
     });
 });
-
-
-var startListening = function (token) {
-  room.on('child_added', function (snapshot) {
-    var msg = snapshot.val();
-    console.log(JSON.stringify(msg));
-
-    var msgemailElement = document.createElement("b");
-    msgemailElement.textContent = msg.email;
-
-    var msgTextElement = document.createElement("p");
-    msgTextElement.textContent = msg.text;
-
-    var msgElement = document.createElement("div");
-    msgElement.append(msgemailElement);
-    msgElement.append(msgTextElement);
-
-    $("#results").append(msgElement);
-  });
-}

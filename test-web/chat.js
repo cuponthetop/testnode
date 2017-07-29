@@ -1,10 +1,12 @@
 var db = firebase.database();
-var room = db.ref('chat/room1');
+var rooms = db.ref('chat');
+var members = db.ref('chat/room1/members');
+var messages = db.ref('chat/room1/msg');
 
 postButton.click(function () {
   var msgUser = username;
   var msgText = textInput.val();
-  room.push({ username: msgUser, text: msgText });
+  messages.push({ userid: msgUser, username: msgUser, text: msgText, timestamp: Date.now()});
 
   textInput.val("");
 });
