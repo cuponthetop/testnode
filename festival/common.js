@@ -12,6 +12,7 @@ function createNewItem(festivalEl) {
 
   var fidEl = document.createElement("p");
   fidEl.textContent = festivalEl.fid;
+  fidEl.className = 'fid';
 
   var titleEl = document.createElement("p");
   titleEl.textContent = festivalEl.title;
@@ -36,6 +37,8 @@ function createNewItem(festivalEl) {
 
 
   var wrapper = document.createElement('div');
+  wrapper.className = 'festival';
+  wrapper.setAttribute("id", festivalEl.fid);
   wrapper.append(imageEl);
   wrapper.append(genreEl);
   wrapper.append(locationEl);
