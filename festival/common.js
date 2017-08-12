@@ -33,7 +33,7 @@ function createNewItem(festivalEl) {
   genreEl.textContent = _.join(_.map(festivalEl.genres, (el) => { return el.genre; }), ', ');
 
   var imageEl = document.createElement("img");
-  imageEl.setAttribute("src", "data:image/gif;base64," + festivalEl.image);
+  imageEl.setAttribute("src", festivalEl.image);
 
 
   var wrapper = document.createElement('div');

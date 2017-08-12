@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase Chat</title>
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    // TODO: Replace with your project's customized code snippet
+    var config = {
+      apiKey: "AIzaSyDAAJDFPXgHl5SFjaV6HFiEOCWySb48lro",
+      authDomain: "gachi-test.firebaseapp.com",
+      databaseURL: "https://gachi-test.firebaseio.com",
+      projectId: "gachi-test",
+      storageBucket: "gachi-test.appspot.com",
+      messagingSenderId: "48888243317"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+  <script src='https://code.jquery.com/jquery-3.2.1.js'></script>
+</head>
+
+<body>
+  <input id="token" type="text" placeholder="token"><br/>
+  <input id="fid" type="text" placeholder="fid"><br/>
+  <input id="lid" type="text" placeholder="lid"><br/>
+  <input id="rid" type="text" placeholder="rid"><br/>
+  <button id="create">Create</button><br/>
+  <button id="accept">Accept</button><br/>
+  <button id="reject">Reject</button><br/>
+  <button id="cancel">Cancel</button><br/>
+  <button id="sent">Sent List</button><br/>
+  <button id="received">Received List</button><br/>
+  <div id="tokenc"></div>
+  <div id="requests"></div>
+
+  <script src='request/common.js'></script>
+  <script src='request/list.js'></script>
+  <script src='request/create.js'></script>
+  <script src='request/accept.js'></script>
+  <script src='request/reject.js'></script>
+  <script src='request/cancel.js'></script>
+</body>
+
+</html>

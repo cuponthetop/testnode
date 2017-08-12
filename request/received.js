@@ -1,24 +1,24 @@
 
-searchButton.click(function () {
+receivedButton.click(function () {
   var token = tokenInput.val();
-  var term = termInput.val();
+  var fid = fidInput.val();
+  var lid = lidInput.val();
+  var rid = ridInput.val();
 
   $.ajax({
-    url: gachi + "/festival/search",
+    url: gachi + "/request/list/received",
     method: 'GET',
     data:
     {
-      term: term,
-      page: 1
     },
     headers:
     {
       authorization: 'Bearer ' + token
     },
     success: function (results) {
-      console.log('search successful + ' + JSON.stringify(results));
+      console.log('received list successful + ' + JSON.stringify(results));
 
-      $('#festivals').empty();
+      $('#requests').empty();
       _.map(results, createNewItem);
       $('#tokenc').val(token);
     }

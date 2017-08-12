@@ -7,6 +7,8 @@ listButton.click(function () {
     method: 'GET',
     data:
     {
+      type: 'default',
+      page: 1
     },
     headers:
     {

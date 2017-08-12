@@ -1,14 +1,14 @@
 
-searchButton.click(function () {
+listButton.click(function () {
   var token = tokenInput.val();
-  var term = termInput.val();
+  var fid = fidInput.val();
 
   $.ajax({
-    url: gachi + "/festival/search",
+    url: gachi + "/leadroom/list",
     method: 'GET',
     data:
     {
-      term: term,
+      fid: fid,
       page: 1
     },
     headers:
@@ -16,9 +16,9 @@ searchButton.click(function () {
       authorization: 'Bearer ' + token
     },
     success: function (results) {
-      console.log('search successful + ' + JSON.stringify(results));
+      console.log('list successful + ' + JSON.stringify(results));
 
-      $('#festivals').empty();
+      $('#leadrooms').empty();
       _.map(results, createNewItem);
       $('#tokenc').val(token);
     }
